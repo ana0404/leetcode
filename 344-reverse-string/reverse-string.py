@@ -1,9 +1,11 @@
 class Solution:
     def reverseString(self, s: List[str]) -> None:
-        temp = []
-        for c in range(len(s)-1,-1,-1):
-            temp.append(s[c])
-        s[:] = temp 
-
+    
+        l = 0
+        r = len(s)-1
+        while l<r:
+            s[l],s[r] = s[r],s[l]
+            l = l+1
+            r = r-1
         
         
